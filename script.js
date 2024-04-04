@@ -1,17 +1,29 @@
 // home :
-const title = document.querySelector('#home-title');
-const homeCards = document.querySelector('.home-cards')
-const cardsLeft = document.querySelector('.cards-left')
-const cardRight = document.querySelectorAll('.cards-right')
+const homeTitle = document.querySelector('#home-title')
+const discovering = document.querySelector('#discovering')
+const card = document.querySelectorAll('.card')
+const about = document.querySelector('.about')
+const aboutLeft = document.querySelector('.about-left')
 
 window.addEventListener('scroll', () => {
-    let value = window.scrollY
+    const top = window.scrollY
 
-    title.style.marginTop = value * 1 + 'px'
+    // home
+    homeTitle.style.marginTop = top * 0.7 + 'px'
+    discovering.style.marginTop =  top * 0.7 + 'px'
+    exploring.style.marginTop = top * 0.7 + 'px'
+    card.forEach(item => {
+        item.style.marginTop = top * 0.7 + 'px'
+    })
+    
 })
 
 
-
+// top >= offsetTop && top < offsetTop + offsetHeight
+// let top = window.scrollY               
+// let offsetTop = section.offsetTop - 100
+// let offsetHeight = section.offsetHeight
+// let id = section.getAttribute('id')
 
 
 // //about :

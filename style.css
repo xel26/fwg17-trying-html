@@ -17,13 +17,15 @@ body{
 
 /* header start */
 header{
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(20px);
     position: fixed;
     z-index: 1;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: .5rem 3rem;
+    padding: .5rem 2rem;
     text-shadow: 2px 2px 4px rgb(0, 0, 0, .2);
     color: #000;
     z-index: 100;
@@ -43,9 +45,7 @@ nav a{
     color: #000;
 }
 
-nav a:hover,
-nav a.active,
-#logo:hover{
+nav a:hover{
     text-decoration: underline;
 }
 /* header end */
@@ -83,11 +83,12 @@ section{
 
 .home-links.left,
 .home-links.right{
-    position: absolute;
+    position: fixed;
     top: 9rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    /* background: #ffffff4b; */
 }
 
 .home-links.left{
@@ -134,6 +135,7 @@ section{
 .home-links .link-group{
     display: flex;
     align-items: center;
+    z-index: 0;
 }
 
 .home-links  .link-info{
@@ -164,6 +166,7 @@ section{
 }
 
 .home-content{
+    /* background: #ffffff47; */
     width: 45rem;
     text-shadow: 2px 2px 4px rgb(0, 0, 0, .2);
     position: fixed;
@@ -233,12 +236,13 @@ button:hover::before{
 }
 
 .home-cards{
-    margin-bottom: 3rem;
+    /* background: #ffffff56; */
     margin-inline: 5rem;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
     gap: 2rem;
+    position: fixed;
+    margin-top: 28rem;
 }
 
 .card{
@@ -288,6 +292,7 @@ button:hover::before{
     left: 0;
     width: 50%;
     height: 100%;
+    /* background: #e1cf763d; */
 }
 
 .about-left #your{
@@ -364,7 +369,7 @@ button:hover::before{
 
 button#more-info{
     position: absolute;
-    right: 2.5rem;
+    left: 3.5rem;
     bottom: 2rem;
     width: 10rem;
 }
@@ -377,6 +382,7 @@ button#more-info{
     height: 100%;
     display: flex;
     flex-direction: column;
+    /* background: #c188f63d; */
 }
 
 .about-right #nture,
@@ -400,15 +406,17 @@ button#more-info{
 }
 
 .content-right{
-    margin-top: 5.5rem;
+    margin-top: 1rem;
     width: 39rem;
     display: flex;
     justify-content: center;
+    /* background: #d0d299d0; */
 }
 
 .content-right .group-list{
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    /* background: #9f787874; */
 }
 
 .group-list ul{
@@ -440,8 +448,208 @@ button#more-info{
 .hidden{
     display: none;
 }
-
-
-
-
 /* about end */
+
+
+
+
+
+/* journey star */
+.journey{
+    display: flex;
+}
+.journey-left{
+    /* background: #c2a1a161; */
+    width:35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.journey-left .content{
+    /* background: #dcdbb279; */
+    margin-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+    gap: 1rem;
+}
+
+#start-journey{
+    width: fit-content;
+}
+
+.journey-left .content .blur{
+    width: fit-content;
+    padding: 0.5rem;
+    margin-left: 7rem;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(20px);
+    -webkit-mask: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+    -webkit-mask-clip: text, padding-box;
+    -webkit-mask-composite: xor;
+}
+
+.blur #new-place{
+    text-shadow: 0 0 5px rgba(254, 241, 206, .8);
+    font-size: 4rem;
+}
+
+.journey-left .content p{
+    font-size: small;
+    color: blanchedalmond;
+}
+
+.journey-left .content > h1{
+    font-size: 3rem;
+    color: black;
+    background: blanchedalmond;
+    width: fit-content;
+    padding: 0.5rem;
+    transform: translateY(2rem);
+    /* border: 1px solid blanchedalmond; */
+    z-index: 1;
+}
+
+.journey-right{
+    /* background: #9bcade69; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.journey-right .wrap-card{
+    /* background: #abddbf4f; */
+    width: 44rem;
+    height: 25rem;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    overflow-x: hidden;
+}
+
+.journey-right .wrap-card .img-card{
+    /* background: #ddd99c63; */
+    position: relative;
+    height: 20rem;
+    width: 12rem;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+.img-card .description{
+    /* background: #ad11119c; */
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    transition: 0.7s;
+    transform: translateY(10rem);
+    opacity: 0;
+}
+
+.img-card h1{
+    font-size: 1rem;
+}
+
+.img-card p{
+    font-size: 0.7rem;
+}
+
+.img-card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    transition: 0.7s;
+}
+
+#img-card-1{
+    background-image: url('asets/img1.jpeg');
+}
+
+#img-card-2{
+    background-image: url('asets/img2.jpeg');
+}
+
+#img-card-3{
+    background-image: url('asets/img3.jpeg');
+}
+
+
+.journey-right .wrap-card .img-card:hover::before{
+    opacity: 0;
+
+}
+
+.journey-right .wrap-card .img-card:hover{
+    transform: scale(110%);
+}
+
+.journey-right .wrap-card .img-card:hover .description{
+    opacity: 100;
+    transform: translateY(-0.3rem);
+}
+/* journey end */
+
+
+/* footer start */
+footer{
+    position: relative;
+    width: 100%;
+    background-image: url('asets/background2.jpeg');
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    position: relative;
+    /* color: blanchedalmond; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .content-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(20px);
+    -webkit-mask: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+    -webkit-mask-clip: text, padding-box;
+    -webkit-mask-composite: xor;
+}
+
+footer .content-footer h5{
+    text-align: center;
+}
+
+footer .group-link a i{
+    color: #000;
+    /* border-radius: 5px; */
+    font-size: 2rem;
+    text-shadow: 0 0 1px rgba(254, 241, 206, .5);
+}
+/* footer end */
